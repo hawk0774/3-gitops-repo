@@ -18,7 +18,7 @@ spec:
       - name: yandex-registry-secret
       containers:
       - name: app
-        image: cr.yandex/MY_REGISTRY_ID/test-app:latest 
+        image: cr.yandex/your_registry_id/test-app:latest 
         ports:
         - containerPort: 80
         readinessProbe:
