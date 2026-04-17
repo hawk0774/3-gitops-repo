@@ -5,6 +5,9 @@ metadata:
   namespace: istio-system
 spec:
   gatewayClassName: istio
+  addresses:
+    - type: Hostname
+      value: istio-ingressgateway.istio-system.svc.cluster.local
   listeners:
     - name: http
       protocol: HTTP
