@@ -12,13 +12,26 @@ spec:
         - path:
             type: PathPrefix
             value: /grafana
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
       backendRefs:
         - name: monitoring-grafana
           port: 80
+
     - matches:
         - path:
             type: PathPrefix
             value: /prometheus
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
       backendRefs:
         - name: monitoring-kube-prometheus-prometheus
           port: 9090
