@@ -2,7 +2,7 @@ grafana:
   env:
     GF_SERVER_DOMAIN: "81.26.178.30"
     GF_SERVER_ROOT_URL: "http://81.26.178.30/grafana/"
-    GF_SERVER_SERVE_FROM_SUB_PATH: "false"
+    GF_SERVER_SERVE_FROM_SUB_PATH: "true"
 
   ingress:
     enabled: false 
