@@ -10,25 +10,8 @@ spec:
   rules:
     - matches:
         - path:
-            type: Exact
-            value: /grafana
-      filters:
-        - type: RequestRedirect
-          requestRedirect:
-            path:
-              type: ReplaceFullPath
-              replaceFullPath: /grafana/
-            statusCode: 301
-    - matches:
-        - path:
             type: PathPrefix
-            value: /grafana/
-      filters:
-        - type: URLRewrite
-          urlRewrite:
-            path:
-              type: ReplacePrefixMatch
-              replacePrefixMatch: /
+            value: /grafana
       backendRefs:
         - name: kube-prometheus-stack-grafana
           port: 80
