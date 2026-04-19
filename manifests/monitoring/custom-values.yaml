@@ -1,11 +1,8 @@
 grafana:
-  ingress:
-    enabled: false
-    
   grafana.ini:
     server:
-      domain: 81.26.178.30
-      root_url: http://81.26.178.30/grafana/
+      domain: ""
+      root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
       serve_from_sub_path: true
 
 prometheus:
