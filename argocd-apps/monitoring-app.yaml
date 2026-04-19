@@ -5,21 +5,18 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
+  source:
     - chart: kube-prometheus-stack
       repoURL: https://prometheus-community.github.io/helm-charts
       targetRevision: 56.6.2
       helm:
         valueFiles:
-          - $values/manifests/monitoring/custom-values.yaml
-
-    - repoURL: 'https://github.com/hawk0774/3-gitops-repo.git'
-      targetRevision: main
-      ref: values 
+          - manifests/monitoring/custom-values.yaml
 
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring
+
   syncPolicy:
     automated:
       prune: true
