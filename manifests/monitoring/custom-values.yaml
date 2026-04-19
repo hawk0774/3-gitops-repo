@@ -1,11 +1,12 @@
 grafana:
-  grafana.ini:
-    server:
-      domain: "81.26.178.30"
-      root_url: "http://81.26.178.30/grafana/"
-      serve_from_sub_path: true
   ingress:
     enabled: false
+    
+  grafana.ini:
+    server:
+      domain: 81.26.178.30
+      root_url: http://81.26.178.30/grafana/
+      serve_from_sub_path: true
 
 prometheus:
   prometheusSpec:
