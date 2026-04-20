@@ -10,6 +10,13 @@ grafana:
 
 prometheus:
   prometheusSpec:
-    web:
-      routePrefix: /prometheus
+    externalUrl: "http://localhost/prometheus"
+    routePrefix: /prometheus
 
+prometheusOperator:
+  admissionWebhooks:
+    enabled: false
+    patch:
+      enabled: false
+  tls:
+    enabled: false
