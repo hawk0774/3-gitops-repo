@@ -30,7 +30,7 @@ spec:
               type: ReplacePrefixMatch
               replacePrefixMatch: /
       backendRefs:
-        - name: kube-prometheus-stack-grafana
+        - name: monitoring-grafana
           port: 80
 
     - matches:
